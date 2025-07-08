@@ -1,0 +1,67 @@
+/*CSS for Project: Nola's Ice Cream */
+
+/*Pink Background color for top navigation */
+.topnav {
+    background-color: #C9407A;
+    overflow: hidden;
+}
+
+/* Style for navigation bar links */
+.topnav a{
+    float: right;
+    color: white;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 14px 16px;
+}
+
+/* Change color of links on hover */
+.topnav a:hover {
+    background-color: white;
+    color:#C9407A;
+}
+
+/* Hero Image */
+.responsive {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-position: center;
+  
+}
+
+/* Header Style */
+h1 {
+    color: #592E1A;
+    text-align: center;
+    font-family: Yellowtail;
+    font-size: clamp(16px, 6vw, 32px); /* min 24px, ideal 6% of viewport width, max 48px */
+    /*font-size: 48px;*/
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h2 {
+color: #592E1A;
+font-size: clamp(12px, 6vw, 20px); /* min 24px, ideal 6% of viewport width, max 48px */
+text-align: center;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+/* Footer Style */
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color:#C9407A;
+  color: white;
+}
