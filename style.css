@@ -1,22 +1,95 @@
 /*CSS for Project: Nola's Ice Cream */
 
-/*Pink Background color for top navigation */
+/*Pink Background color for top navigation 
 .topnav {
     background-color: #C9407A;
     overflow: hidden;
 }
 
-/* Style for navigation bar links */
+/* Style for navigation bar links 
 .topnav a{
     float: right;
     color: white;
     text-align: left;
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     padding: 14px 16px;
+}
+*/
+*{
+  margin: 0;
+  padding: 0;
+}
+/*
+body{
+  min-height: 100vh;
+  
+  background-image: url(iceCream.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+*/
+nav{
+  background-color: #C9407A;
+  box-shadow: 3px 3px 5px rgba(0,0,0, .1);
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li{
+  height: 50px;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: right;
+  color: white;
+}
+
+nav a:hover{
+  background-color: blue;
+}
+
+nav li:first-child{
+  margin-right:auto;
+}
+
+.sidebar{
+  position:fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #c940795f;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0,0,0, .1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li{
+  width: 100%;
+}
+
+.sidebar a{
+  width: 100%;
 }
 
 /* Change color of links on hover */
@@ -39,7 +112,7 @@ h1 {
     color: #592E1A;
     text-align: center;
     font-family: Yellowtail;
-    font-size: clamp(16px, 6vw, 32px); /* min 24px, ideal 6% of viewport width, max 48px */
+    font-size: clamp(16px, 6vw, 24px); /* min 24px, ideal 6% of viewport width, max 48px */
     /*font-size: 48px;*/
     font-style: normal;
     font-weight: 400;
