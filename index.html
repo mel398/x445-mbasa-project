@@ -31,21 +31,8 @@ CODING PROJECT -
 
 <!--********* HEADER *********-->
 <!--Replace links later
-<header>
-    
-    <div class="topnav">
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Home</a>
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Our Story</a>
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Menu</a>
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Merch</a>
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Inside Scoop</a>
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Gallery</a>
-
-
-    </div> 
-</header>
 -->
-    <nav>
+    <nav class="sticky">
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Our Story</a></li>
@@ -58,7 +45,7 @@ CODING PROJECT -
             <li>
                 <a href="#">
                     <img src="Nav_Logo.png" 
-                    width="85px"/>
+                    width="100px"/>
                 </a>
             </li>
             <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Menu</a></li>
@@ -69,18 +56,33 @@ CODING PROJECT -
             <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
     </nav>
+<!--
 <img 
     class="responsive"
     src="iceCream.webp"
     flex-shrink: 0;
     />
+-->    
+<!--Looped Video-->    
+<video
+    class="responsive"
+    autoplay muted
+    loop
+>
+<source src="video_text.mov" type="video/mp4">
+</video>
 
+
+<!--********* SECTION 1: HOURS AND LOCATIONS *********-->    
 <div class="locationInfo"> 
+    
     <!--Location Photo-->
     <div class="box">
-        <img
+        <img class="responsive"
+            style="background-position: center;"
             src="Outside.jpg"
-            width="400px"
+            width="700px"
+            height="auto"
         />
     </div>
 
@@ -120,12 +122,85 @@ CODING PROJECT -
     <h2>(707)123-4567</h2>
     -->   
 </div>
-<!--
+<!--********* SECTION 2: HOURS AND LOCATIONS *********-->          
+<div class="ourStory">
+    <h1 class="yellowtail-regular">Our Story</h1>
+    <p>
+        <img
+                src="ourStory_Family.png"
+                class="imageFloatLeft"
+                alt="Ngyuen family photo"
+                style="width: 100%"
+              />
+
+        Keren and Khoa are high school sweethearts who grew up together 
+        in the heart of the Dr. Phillips community. From a young age, they
+         dreamed of building a big, joyful family and one day opening an 
+         ice cream shop that felt just as warm and welcoming. In 2015, 
+         their journey into parenthood began with the birth of their first 
+         son, Jackson, and shortly after came the launch of their family 
+         YouTube channel, KKandbabyJ. Over the years, their family continued 
+         to grow with Landon, Sutton, Hanson, and finally their youngest and 
+         only daughter, Magnolia. Her sweet nickname, “Nola,” became the perfect
+          inspiration for the name of their long-envisioned ice cream shop—a 
+          tribute to love, family, and the joy of sharing something special.
+    </p>
+    <p>
+        Nola’s Ice Cream is a celebration of that vision, brought to life in 
+        collaboration with renowned ice cream shop owner Marie Mercado, the 
+        creative force behind The Greenery Creamery and Sampaguita. Together,
+        they’ve crafted a place that’s as thoughtful and inviting as it is 
+        delicious. Rooted in community, family, and a shared love for great 
+        dessert, Nola’s aims to serve the Dr. Phillips neighborhood with
+        hand-crafted ice cream that’s bursting with flavor, quality, and a 
+        little bit of magic. Whether you’re a local or just passing through,
+        we hope every scoop makes you feel right at home. Thank you for being 
+        apart out ours.
+    </p>
+
+
+    <!--Our Story Youtube Video-->
+    <div class="ytVideo">
+        
+        <!--
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/watch?v=SWhBUZC3Wh4">
+        </iframe>
+    -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SWhBUZC3Wh4?si=JRAoYVOQo6ICmIbZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+</div>
+
+<!--********* FOOTER *********-->    
     <footer>
+        <!--
         <p>Author: Melissa Basa<br>
         <a href="mailto:hege@example.com">nolasEmail@gmail.com</a></p>
+        -->
+        <div class="foot">
+        <!--1 logo-->
+        <div class="footbox">
+            <img
+            src="Ice_Cream_Logo.png"
+            width="100px";
+            />
+        </div>
+        <!--2 location and contact-->
+        <div class="footbox">
+            box 2
+        </div>
+        <!--3 hours-->
+        <div class="footbox">
+            box 3
+        </div>
+        <!--4 careers and follow-->
+        <div class="footbox">
+            box 4
+        </div>
+        </div>
     </footer>
--->
+
 <!--********* JavaScript *********-->    
     <script>
         function showSidebar(){

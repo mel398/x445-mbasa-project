@@ -16,9 +16,15 @@ body{
 
 
 /* Navigation Properties*/
+.sticky{
+  position: sticky;
+  top: 0;
+}
+
 nav{
   background-color: #C9407A;
   box-shadow: 3px 3px 5px rgba(0,0,0, .1);
+  z-index: 999;
 }
 
 nav ul{
@@ -30,7 +36,7 @@ nav ul{
 }
 
 nav li{
-  height: 50px;
+  height: 70px;
 }
 
 nav a{
@@ -58,8 +64,8 @@ nav li:first-child{
   right: 0;
   height: 100vh;
   width: 250px;
-  z-index: 999;
-  background-color: #c940795f;
+
+  background-color: #592e1a;
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0,0,0, .1);
   display: none;
@@ -90,8 +96,11 @@ nav li:first-child{
 }
 
 .locationInfo{
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: white;
   min-height: 800px;
-  border: 8px solid black;
+  /*border: 8px solid black;*/
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -103,9 +112,22 @@ nav li:first-child{
   display: flex;
   justify-content: center;
   align-items: center ;
-  border: 8px solid rgb(186, 18, 247);
+  /*border: 8px solid rgb(186, 18, 247); */
   
   width: 700px;
+}
+
+.ourStory{
+  background-color: #EBB0BF;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ytVideo{
+  display: block;
+  
+  margin: 0 auto;
 }
 
 /* Hero Image */
@@ -113,8 +135,13 @@ nav li:first-child{
   width: 100%;
   height: auto;
   object-fit: cover;
-  background-position: center;
+  /*background-position: center;*/
   
+}
+
+.responsivePhoto {
+  max-width: 100%;
+  height: auto;
 }
 
 /* YellowTail Headers */
@@ -130,13 +157,35 @@ nav li:first-child{
 .open-sans-regular {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-size: large;
+  font-weight: 600;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
   color: #592E1A;
   text-align: center;
 }
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: large;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  font-variation-settings:
+    "wdth" 100;
+  color: #592E1A;
+  text-align: center;
+}
+
+.imageFloatLeft{
+  max-width: 400px;
+  float:left;
+  padding: right 20px;
+  margin: 0px 0px 15px 20px;
+}
+
 /* Header Style 
 h1 {
     color: #592E1A;
@@ -162,8 +211,20 @@ line-height: normal;
 
 /* Footer Style */
 footer {
+  
+  bottom: 0;
   text-align: center;
   padding: 3px;
   background-color:#C9407A;
   color: white;
+}
+
+.foot{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+.footbox{
+  border: 8px solid rgb(186, 18, 247); 
+  display: flex;
 }
