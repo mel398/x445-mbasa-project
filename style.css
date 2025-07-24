@@ -130,6 +130,47 @@ nav li:first-child{
   margin: 0 auto;
 }
 
+.menuSection{
+  background-color: white;
+  /*
+  justify-content: center;
+  align-items: center;
+  */
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.menuItems{
+  display: flex;
+  justify-content: space-around;
+}
+
+.textOverImage{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scroll{
+  background-color: #EBB0BF;
+  width: 300px;
+  height: 100px;
+  overflow: scroll;
+}
+
+.merchTopContainer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  padding: 10px;
+}
+
 /* Hero Image */
 .responsive {
   width: 100%;
