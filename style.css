@@ -136,14 +136,18 @@ nav li:first-child{
   justify-content: center;
   align-items: center;
   */
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction: row;
+
   padding: 20px;
 }
 
 .menuItems{
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
+  padding: 20px;
+
 }
 
 .textOverImage{
@@ -164,11 +168,6 @@ nav li:first-child{
 .merchTopContainer{
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: auto;
-  justify-content: center;
-  padding: 10px;
 }
 
 /* Hero Image */
@@ -185,6 +184,15 @@ nav li:first-child{
   height: auto;
 }
 
+p{
+  text-align: left;
+  text-indent: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  line-height: 8;
+}
 /* YellowTail Headers */
 .yellowtail-regular {
   font-family: "Yellowtail", cursive;
