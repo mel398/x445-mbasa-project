@@ -25,6 +25,7 @@ CODING PROJECT -
 
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="w3.css">
  
 </head>
 <body>
@@ -35,11 +36,11 @@ CODING PROJECT -
     <nav class="sticky">
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Our Story</a></li>
-            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Menu</a></li>
-            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Merch</a></li>
-            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Inside Scoop</a></li>
-            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Gallery</a></li>
+            <li><a href="#ourStoryLink">Our Story</a></li>
+            <li><a href="#menuLink">Menu</a></li>
+            <li><a href="#merchLink">Merch</a></li>
+            <li><a href="#insideScoopLink">Inside Scoop</a></li>
+            <li><a href="#galleryLink">Gallery</a></li>
         </ul>
         <ul>
             <li>
@@ -48,11 +49,11 @@ CODING PROJECT -
                     width="100px"/>
                 </a>
             </li>
-            <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Menu</a></li>
-            <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Our Story</a></li>
-            <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Merch</a></li>
-            <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Inside Scoop</a></li>
-            <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Gallery</a></li>
+            <li class="hideOnMobile"><a href="#menuLink">Menu</a></li>
+            <li class="hideOnMobile"><a href="#ourStoryLink">Our Story</a></li>
+            <li class="hideOnMobile"><a href="#merchLink">Merch</a></li>
+            <li class="hideOnMobile"><a href="#insideScoopLink">Inside Scoop</a></li>
+            <li class="hideOnMobile"><a href="#galleryLink">Gallery</a></li>
             <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
     </nav>
@@ -74,7 +75,7 @@ CODING PROJECT -
 
 
 <!--********* SECTION 1: HOURS AND LOCATIONS *********-->    
-<div class="locationInfo"> 
+<div class="locationInfo" > 
     
     <!--Location Photo-->
     <div class="box">
@@ -123,7 +124,7 @@ CODING PROJECT -
     -->   
 </div>
 <!--********* SECTION 2: HOURS AND LOCATIONS *********-->          
-<div class="ourStory">
+<div class="ourStory" id="ourStoryLink">
     <h1 class="yellowtail-regular">Our Story</h1>
     <p>
         <img
@@ -206,8 +207,8 @@ CODING PROJECT -
 </div>
 
 <!--********* SECTION 3: MENU *********-->     
-<div class="menuSection">
-    <h1 class="yellowtail-regular">Menu</h1>
+<div class="menuSection" id="menuLink">
+    <h1 class="yellowtail-regular" >Menu</h1>
 
     <div class="menuItems"> <!--Box for photos and scrollable items-->
         <div><!--Scoops Section-->
@@ -304,10 +305,14 @@ CODING PROJECT -
 
         </div>                
     </div>
+    <div>
+        <!---->
+
+    </div>
 
 </div>
 <!--********* SECTION 4: Merch*********-->    
-<div
+<div id="merchLink"
 style="background-color: pink;">
 
     <h1 class="yellowtail-regular">Merch</h1>
@@ -328,7 +333,7 @@ style="background-color: pink;">
 </div>
     
 <!--********* SECTION 5: Inside Scoop*********-->    
-<div>
+<div id="insideScoopLink">
 
     <h1 class="yellowtail-regular">Inside Scoop</h1>
     
@@ -451,7 +456,11 @@ style="background-color: pink;">
     </div>
 </div>
 
- 
+ <!--********* SECTION 6: Gallery*********-->  
+<div id="galleryLink">
+
+</div>
+
     
 <!--********* FOOTER *********-->    
     <footer>
@@ -509,6 +518,49 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+var myIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+
+      // slideshow - carousel
+      // hook each carousel button
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+        myIndex = n;
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+      }
+      // carousel slideshow end
     </script>
  
 </body>
