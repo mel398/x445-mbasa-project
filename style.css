@@ -242,6 +242,45 @@ p {
   margin: 0px 0px 15px 20px;
 }
 
+.insideScoopBoxes{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+/* Accoridan Properties----------------*/
+.accordion {
+  background-color: #EBB0BF;
+  color:#592e1a;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color:#C9407A; 
+  color:#ffffff;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color:#ffffff;
+
+  overflow: hidden;
+}
+
+.beVertical{
+  display: flex;
+  flex-direction: column;
+}
 /* Header Style 
 h1 {
     color: #592E1A;
@@ -281,6 +320,6 @@ footer {
   
 }
 .footbox{
-  border: 8px solid rgb(186, 18, 247); 
+  border: 8px solid white; 
   display: flex;
 }
