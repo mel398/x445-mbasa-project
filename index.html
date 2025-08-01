@@ -25,34 +25,22 @@ CODING PROJECT -
 
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="w3.css">
  
 </head>
 <body>
 
 <!--********* HEADER *********-->
 <!--Replace links later
-<header>
-    
-    <div class="topnav">
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Home</a>
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Our Story</a>
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Menu</a>
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Merch</a>
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Inside Scoop</a>
-        <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Gallery</a>
-
-
-    </div> 
-</header>
 -->
     <nav class="sticky">
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Our Story</a></li>
-            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Menu</a></li>
-            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Merch</a></li>
-            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Inside Scoop</a></li>
-            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Gallery</a></li>
+            <li><a href="#ourStoryLink">Our Story</a></li>
+            <li><a href="#menuLink">Menu</a></li>
+            <li><a href="#merchLink">Merch</a></li>
+            <li><a href="#insideScoopLink">Inside Scoop</a></li>
+            <li><a href="#galleryLink">Gallery</a></li>
         </ul>
         <ul>
             <li>
@@ -61,28 +49,41 @@ CODING PROJECT -
                     width="100px"/>
                 </a>
             </li>
-            <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Menu</a></li>
-            <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Our Story</a></li>
-            <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Merch</a></li>
-            <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Inside Scoop</a></li>
-            <li class="hideOnMobile"><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Gallery</a></li>
+            <li class="hideOnMobile"><a href="#menuLink">Menu</a></li>
+            <li class="hideOnMobile"><a href="#ourStoryLink">Our Story</a></li>
+            <li class="hideOnMobile"><a href="#merchLink">Merch</a></li>
+            <li class="hideOnMobile"><a href="#insideScoopLink">Inside Scoop</a></li>
+            <li class="hideOnMobile"><a href="#galleryLink">Gallery</a></li>
             <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
     </nav>
+<!--
 <img 
     class="responsive"
     src="iceCream.webp"
     flex-shrink: 0;
     />
+-->    
+<!--Looped Video-->    
+<video
+    class="responsive"
+    autoplay muted
+    loop
+>
+<source src="video_text.mov" type="video/mp4">
+</video>
+
 
 <!--********* SECTION 1: HOURS AND LOCATIONS *********-->    
-<div class="locationInfo"> 
+<div class="locationInfo" > 
     
     <!--Location Photo-->
     <div class="box">
-        <img
+        <img class="responsive"
+            style="background-position: center;"
             src="Outside.jpg"
             width="700px"
+            height="auto"
         />
     </div>
 
@@ -122,12 +123,374 @@ CODING PROJECT -
     <h2>(707)123-4567</h2>
     -->   
 </div>
-<!--
+<!--********* SECTION 2: HOURS AND LOCATIONS *********-->          
+<div class="ourStory" id="ourStoryLink">
+    <h1 class="yellowtail-regular">Our Story</h1>
+    <p>
+        <img
+                src="ourStory_Family.png"
+                class="imageFloatLeft"
+                alt="Ngyuen family photo"
+                style="float:left;width:40%;height:40%;margin-right: 40px;"
+              />
+
+        Keren and Khoa are high school sweethearts who grew up together 
+        in the heart of the Dr. Phillips community. From a young age, they
+         dreamed of building a big, joyful family and one day opening an 
+         ice cream shop that felt just as warm and welcoming. In 2015, 
+         their journey into parenthood began with the birth of their first 
+         son, Jackson, and shortly after came the launch of their family 
+         <a href="https://www.youtube.com/channel/UCU-ZXqhx1xjsxO1ftXJELdg">YouTube channel</a>
+         , KKandbabyJ. Over the years, their family continued 
+         to grow with Landon, Sutton, Hanson, and finally their youngest and 
+         only daughter, Magnolia. Her sweet nickname, “Nola,” became the perfect
+          inspiration for the name of their long-envisioned ice cream shop—a 
+          tribute to love, family, and the joy of sharing something special.
+                  Keren and Khoa are high school sweethearts who grew up together 
+        in the heart of the Dr. Phillips community. From a young age, they
+         dreamed of building a big, joyful family and one day opening an 
+         ice cream shop that felt just as warm and welcoming. In 2015, 
+         their journey into parenthood began with the birth of their first 
+         son, Jackson, and shortly after came the launch of their family 
+         YouTube channel
+         , KKandbabyJ. Over the years, their family continued 
+         to grow with Landon, Sutton, Hanson, and finally their youngest and 
+         only daughter, Magnolia. Her sweet nickname, “Nola,” became the perfect
+          inspiration for the name of their long-envisioned ice cream shop—a 
+          tribute to love, family, and the joy of sharing something special.
+    </p>
+    <p>
+                <img
+                src="Nolie_About.jpg"
+                class="imageFloatLeft"
+                alt="Ngyuen family photo"
+                style="float:right;width:30%;height:30%; margin-left: 40px;"
+              />
+        Nola’s Ice Cream is a celebration of that vision, brought to life in 
+        collaboration with renowned ice cream shop owner Marie Mercado, the 
+        creative force behind 
+        <a href="https://www.thegreenerycreamery.com/">The Greenery Creamery</a>
+         and Sampaguita. Together,
+        they’ve crafted a place that’s as thoughtful and inviting as it is 
+        delicious. Rooted in community, family, and a shared love for great 
+        dessert, Nola’s aims to serve the Dr. Phillips neighborhood with
+        hand-crafted ice cream that’s bursting with flavor, quality, and a 
+        little bit of magic. Whether you’re a local or just passing through,
+        we hope every scoop makes you feel right at home. Thank you for being 
+        apart out ours.
+                Nola’s Ice Cream is a celebration of that vision, brought to life in 
+        collaboration with renowned ice cream shop owner Marie Mercado, the 
+        creative force behind 
+        The Greenery Creamery
+         and Sampaguita. Together,
+        they’ve crafted a place that’s as thoughtful and inviting as it is 
+        delicious. Rooted in community, family, and a shared love for great 
+        dessert, Nola’s aims to serve the Dr. Phillips neighborhood with
+        hand-crafted ice cream that’s bursting with flavor, quality, and a 
+        little bit of magic. Whether you’re a local or just passing through,
+        we hope every scoop makes you feel right at home. Thank you for being 
+        apart out ours.
+    </p>
+
+
+    <!--Our Story Youtube Video-->
+    <div class="ytVideo">
+        
+        <!--
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/watch?v=SWhBUZC3Wh4">
+        </iframe>
+    -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SWhBUZC3Wh4?si=JRAoYVOQo6ICmIbZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+</div>
+
+<!--********* SECTION 3: MENU *********-->     
+<div class="menuSection" id="menuLink">
+    <h1 class="yellowtail-regular" >Menu</h1>
+
+    <div class="menuItems"> <!--Box for photos and scrollable items-->
+        <div><!--Scoops Section-->
+            <div><!--Scoops Photo-->
+                <img
+                    src="scoopsImage.png"
+                    width="300px"
+                    height="300px"
+                />
+            </div>
+            <div class="scroll"><!--Scrollable Box-->
+                <ul class="b">
+                    <li>Single</li>
+                    <li>Double</li>
+                    <li>Triple</li>
+                    <li>Kids</li>
+                    <li>Pint</li>
+                    <li>Mini Flight</li>
+                    <li>Flight</li>
+                    <li>Bunny</li>
+                    <li>Sandwhich</li>
+                </ul>
+            </div>
+
+        </div>
+        <div><!--Flavors Section-->
+            <div>
+                <img
+                    src="Display_Cover.webp"
+                    width="300px"
+                    height="300px"
+                />
+            </div>
+            <div class="scroll"><!--Scrollable Box-->
+                <ul class="b">
+                    <li>Strawberry</li>
+                    <li>Vanilla</li>
+                    <li>Chocolate</li>
+                    <li>Matcha</li>
+                    <li>Thai Tea</li>
+                    <li>Hojicha</li>
+                    <li>Vietnamese Coffee</li>
+                    <li>Chocolate Chip</li>
+                    <li>Cookie Monster</li>
+                </ul>
+            </div>
+
+        </div>
+        <div><!--Toppings Section-->
+            <div>
+                <img
+                    src="toppingImage.png"
+                    width="300px"
+                    height="300px"
+                />
+            </div>
+            <div class="scroll"><!--Scrollable Box-->
+                <ul class="b">
+                    <li>Sprinkles</li>
+                    <li>Tajin</li>
+                    <li>Coconut Flakes</li>
+                    <li>Graham Cracker Dust</li>
+                    <li>Whipped Cream</li>
+                    <li>Cherries</li>
+                    <li>Chopped Peanuts</li>
+                    <li>Chocolate Sauce</li>
+                    <li>Fruity Pebbles</li>
+                    <li>Condensed Milk</li>
+                </ul>
+            </div>
+
+        </div>
+        <div><!--Drinks Section-->
+            <div>
+                <img
+                    src="drinkImage.png"
+                    width="300px"
+                    height="300px"
+                />
+            </div>
+            <div class="scroll"><!--Scrollable Box-->
+                <ul class="b">
+                    <li>Water Bottle</li>
+                    <li>Lemonade</li>
+                    <li>Soda Can</li>
+                    <li>Vietnamese Coffee</li>
+                    <li>Matcha</li>
+                    <li>Horchata</li>
+                    <li>Hot Cocoa</li>
+                    <li>Hojicha</li>
+                    <li>Iced Tea</li>
+                </ul>
+            </div>
+
+        </div>                
+    </div>
+    <div>
+        <!---->
+
+    </div>
+
+</div>
+<!--********* SECTION 4: Merch*********-->    
+<div id="merchLink"
+style="background-color: pink;">
+
+    <h1 class="yellowtail-regular">Merch</h1>
+    <div class="merchTopContainer">
+        <img
+            src="duo_merch.jpg"
+            class=".responsive"
+            width="auto"
+            height="440px"
+        />
+        <img
+            src="khoaMerch.png"
+            class=".merchTopContainer"
+            width="auto"
+            height="440px"
+        />
+    </div>
+</div>
+    
+<!--********* SECTION 5: Inside Scoop*********-->    
+<div id="insideScoopLink">
+
+    <h1 class="yellowtail-regular">Inside Scoop</h1>
+    
+    <div class="insideScoopBoxes">
+        <div>
+            <p>
+                Nabe is Keren and Khoa’s cozy, modern take on Japanese hot pot where fresh ingredients, flavorful broths, and good company come together in every meal. It’s the kind of place where you can slow down, cook at the table, and share laughs over steaming bowls and sizzling bites. Nabe is all about family, community, and creating memorable moments—one hot pot at a time.
+            </p>
+        </div>
+
+        <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IemziMg63ZQ?si=6ecdVvUepf3CTTC9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         </div>
+    </div>
+    <div class="insideScoopBoxes">
+        <div>
+            <p>
+                Sutton is absolutely obsessed with sprinkles. For his third birthday he had a birthday cake that oozed sprinkles when you cut into it. Come in and ask for your ice cream “The Sutton Way” for a treat covered in more sprinkles than you can handle.
+             </p>
+        </div>
+
+        <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fnb4RL8Xe8k?si=KGPKVtR9BAKBXKGh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         </div>
+    </div>    
+
+    <div class="insideScoopBoxes">
+        <div>
+            <p>
+                You’ve found our hidden discount code! Come in shop and get a free scoop on us with the discount code “KEREEENNN!” or show us this promo on your phone. Act fast because it’s here only for a limited time! Limit one per customer.
+             </p>
+        </div>
+
+        <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LYdkzK5Thl8?si=lOhvNGRzCCOmNAwr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         </div>
+    </div>
+</div>
+
+<button class="accordion">The Story of Keren and Khoa</button>
+<div class="panel">
+  <p>
+        <img
+                src="kere_khoa.png"
+                class="imageFloatLeft"
+                alt="Ngyuen family photo"
+                style="float:left;width:40%;height:40%;margin-right: 40px;"
+              />
+
+        Keren and Khoa are high school sweethearts who grew up just down the street from each other in the Dr. Phillips community of Orlando. They met as teenagers and quickly became inseparable, bonding over silly jokes, late-night talks, and dreams of building a big, happy life together. Whether they were studying for exams or sneaking out for ice cream dates, their story has always been full of laughter and love.
+         As the years went on, their love story grew into something even sweeter. From starting a family to sharing their lives on YouTube, Keren and Khoa built a community that followed their journey every step of the way. Nola’s Ice Cream is a dream come true for them—a place to bring people together, share joy, and celebrate the simple things (like a really good scoop of ice cream).
+    </p>
+</div>
+<button class="accordion">Meet The Family</button>
+<div class="panel">
+    <div class="beVertical">
+  <div>
+  <p>
+        <img
+                src="jackso_photo.png"
+                class="imageFloatLeft"
+                alt="Ngyuen family photo"
+                style="float:left;width:40%;height:40%;margin-right: 40px;"
+              />
+
+       Jackson. The oldest of the bunch, Jackson is kind-hearted, curious, and always ready to help. He’s thoughtful and mature for his age, often looking out for his younger brothers with a big-brother sense of responsibility and love.
+    </p>
+  </div>
+
+    <div>
+      <p>
+        <img
+                src="landon_photo.png"
+                class="imageFloatLeft"
+                alt="Ngyuen family photo"
+                style="float:left;width:40%;height:40%;margin-right: 40px;"
+              />
+
+        Landon. Landon is full of charm and spunk. He’s playful, outspoken, and loves to keep everyone laughing with his big personality and sense of humor.
+    </p>
+    </div>
+
+    <div>
+      <p>
+        <img
+                src="sutton_photo.png"
+                class="imageFloatLeft"
+                alt="Ngyuen family photo"
+                style="float:left;width:40%;height:40%;margin-right: 40px;"
+              />
+
+        Sutton. Sutton is the cuddly one—sweet, silly, and always smiling. He adores his older brothers and brings a gentle joy to the house with his easygoing nature.
+    </p>
+    </div>
+    <div>
+      <p>
+        <img
+                src="hansen_photo.png"
+                class="imageFloatLeft"
+                alt="Ngyuen family photo"
+                style="float:left;width:40%;height:40%;margin-right: 40px;"
+              />
+
+        Hansen. Hansen is curious and observant, always watching the world with wide eyes and a quiet confidence. He’s growing into his own personality and adds a peaceful presence to the crew.
+    </p>
+    </div>
+    <div>
+              <p>
+        
+        <img
+                src="Nolie_About.jpg"
+                class="imageFloatLeft"
+                alt="Ngyuen family photo"
+                style="float:left;width:40%;height:40%;margin-right: 40px;"
+              />
+
+        Magnolia. Meet our spunky CEO, Nola. She is joyful, bubbly, and full of light. She’s doted on by her brothers and brings everyone together with her adorable giggles and endless sweetness.
+    </p>
+    </div>
+    </div>
+</div>
+
+ <!--********* SECTION 6: Gallery*********-->  
+<div id="galleryLink">
+
+</div>
+
+    
+<!--********* FOOTER *********-->    
     <footer>
+        <!--
         <p>Author: Melissa Basa<br>
         <a href="mailto:hege@example.com">nolasEmail@gmail.com</a></p>
+        -->
+        <div class="foot">
+        <!--1 logo-->
+        <div class="footbox">
+            <img
+            src="Ice_Cream_Logo.png"
+            width="100px";
+            />
+        </div>
+        <!--2 location and contact-->
+        <div class="footbox">
+            box 2
+        </div>
+        <!--3 hours-->
+        <div class="footbox">
+            box 3
+        </div>
+        <!--4 careers and follow-->
+        <div class="footbox">
+            box 4
+        </div>
+        </div>
     </footer>
--->
+
 <!--********* JavaScript *********-->    
     <script>
         function showSidebar(){
@@ -140,6 +503,64 @@ CODING PROJECT -
             sidebar.style.display = 'none'
         }
 
+        var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+var myIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+
+      // slideshow - carousel
+      // hook each carousel button
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+        myIndex = n;
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+      }
+      // carousel slideshow end
     </script>
  
 </body>
