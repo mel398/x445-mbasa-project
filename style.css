@@ -86,6 +86,11 @@ nav li:first-child{
   display: none;
 }
 
+.centerDown{
+  display: inline-block;
+  padding-top: 25px;
+}
+
 @media(max-width: 800px){
   .hideOnMobile{
     display: none;
