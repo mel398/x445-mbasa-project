@@ -460,7 +460,7 @@ style="background-color: white;">
          </div>
     </div>
 </div>
-
+<!--Start 
 <button class="accordion">The Story of Keren and Khoa</button>
 <div class="panel">
   <p>
@@ -475,6 +475,7 @@ style="background-color: white;">
          As the years went on, their love story grew into something even sweeter. From starting a family to sharing their lives on YouTube, Keren and Khoa built a community that followed their journey every step of the way. Nola’s Ice Cream is a dream come true for them—a place to bring people together, share joy, and celebrate the simple things (like a really good scoop of ice cream).
     </p>
 </div>
+
 <button class="accordion">Meet The Family</button>
 <div class="panel">
     <div class="beVertical">
@@ -542,7 +543,38 @@ style="background-color: white;">
     </p>
     </div>
     </div>
+</div>    
+-->
+
+<div class="accordion-wrapper">
+  <h2>Accordion with symbols</h2>
+  <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+
+  <button class="accordion">Section 1</button>
+  <div class="panel">
+    <p>
+        <img
+                src="jackso_photo.png"
+                class="imageFloatLeft"
+                alt="Ngyuen family photo"
+                style="float:left;width:40%;height:40%;margin-right: 40px;"
+              />
+
+       Jackson. The oldest of the bunch, Jackson is kind-hearted, curious, and always ready to help. He’s thoughtful and mature for his age, often looking out for his younger brothers with a big-brother sense of responsibility and love.
+    </p>
+  </div>
+
+  <button class="accordion">Section 2</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  </div>
+
+  <button class="accordion">Section 3</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  </div>
 </div>
+
 <hr class="section-divider" />
  <!--********* SECTION 6: Gallery*********-->  
 <div id="galleryLink">
@@ -591,17 +623,15 @@ style="background-color: white;">
             sidebar.style.display = 'none'
         }
 
-        var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+var acc = document.getElementsByClassName("accordion");
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
 }

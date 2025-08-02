@@ -275,10 +275,56 @@ p {
   background-color: #C9407A !important;
 }
 
-/* Accoridan Properties----------------*/
+/*New Accordian Properties*/
+.accordion-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Accordion styles */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B'; /* Plus sign */
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212"; /* Minus sign */
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+/*End Accordian Properties*/
+
+          /* Accoridan Properties---------
 .accordion {
   
-  max-width: 80%;          /* keeps line away from edges */
+  max-width: 80%;  
   background-color: #EBB0BF;
   color:#592e1a;
   cursor: pointer;
@@ -297,14 +343,14 @@ p {
 }
 
 .panel {
-  margin: 40px auto;       /* center with top & bottom spacing */
+  margin: 40px auto;      
   padding: 0 18px;
   display: none;
   background-color:#ffffff;
 
   overflow: hidden;
 }
-
+                -------*/
 .beVertical{
   display: flex;
   flex-direction: column;
