@@ -254,6 +254,17 @@ p {
   justify-content: space-evenly;
 
 }
+/* Table Properties----------------*/
+.mel-pink,
+.mel-hover-pink:hover {
+  color: #fff !important;
+  background-color: #EBB0BF !important;
+}
+
+.mel-darkpink{
+    color: #fff !important;
+  background-color: #C9407A !important;
+}
 
 /* Accoridan Properties----------------*/
 .accordion {

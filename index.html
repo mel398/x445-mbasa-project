@@ -6,6 +6,16 @@ CODING PROJECT -
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- load jQuery and tablesorter scripts -->
+    <script
+      type="text/JavaScript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
+    ></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nola's Ice Cream</title>
@@ -26,6 +36,12 @@ CODING PROJECT -
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="stylesheet" href="w3.css">
+
+
+
+
+
+    
  
 </head>
 <body>
@@ -334,7 +350,57 @@ style="background-color: pink;">
         />
     </div>
 </div>
-    
+      <div class="w3-container w3-padding-64" id="utensil">
+        <div class="w3-padding-large">
+          <!--<h1 class="w3-center">Utensil</h1>
+           add sortable table begin -->
+          <!-- step 1: if the table displays images, add image files to img folder -->
+          <!-- step 2: create a table with 4 columns -->
+          <!-- step 3: add jquery links inside the <head> tag above to support sortability -->
+          <!-- step 4: add javascript in <script> tag below to sort in in ascending/descending order -->
+
+          <table id="myTable" class="w3-table-all">
+            <thead>
+              <tr class="w3-brown">
+                <th>MERCH</th>
+                <th>NAME</th>
+                <th>PRICE</th>
+                <th>COLOR</th>
+              </tr>
+            </thead>
+            <tr class="mel-hover-pink">
+              <td><img src="./merch/brown_shirt.png" style="width: 120px" /></td>
+              <td>T-Shirt</td>
+              <td>$21.99</td>
+              <td>Brown</td>
+            </tr>
+            <tr class="mel-hover-pink">
+              <td>
+                <img src="./merch/pink_long.png" style="width: 120px" />
+              </td>
+              <td>Long Sleeve Shirt</td>
+              <td>$34.99</td>
+              <td>Light Pink</td>
+            </tr>
+            <tr class="mel-hover-pink">
+              <td><img src="./merch/pink_hat.png" style="width: 120px" /></td>
+              <td>Baseball Cap</td>
+              <td>$15.99</td>
+              <td>Pink</td>
+            </tr>
+            <tr class="mel-hover-pink">
+              <td>
+                <img src="./merch/grey_crewneck.png" style="width: 120px" />
+              </td>
+              <td>Crewneck</td>
+              <td>$41.99</td>
+              <td>Big</td>
+            </tr>
+          </table>
+          <!-- add sortable table end -->
+        </div>
+      </div>
+  
 <!--********* SECTION 5: Inside Scoop*********-->    
 <div id="insideScoopLink">
 
@@ -521,51 +587,23 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-var myIndex = 0;
-      carousel();
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {
-          myIndex = 1;
-        }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 2000); // Change image every 2 seconds
-      }
 
-      // slideshow - carousel
-      // hook each carousel button
-      function currentDiv(n) {
-        showDivs((slideIndex = n));
-        myIndex = n;
-      }
-
-      function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        if (n > x.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = x.length;
-        }
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-        }
-        x[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " w3-opacity-off";
-      }
       // carousel slideshow end
+    
+          // sortable table begin
+$(function() {
 
-      
+  // call the tablesorter plugin
+  $("#myTable").tablesorter({
+    theme : 'blue',
+
+    // change the default sorting order from 'asc' to 'desc'
+    sortInitialOrder: "asc"
+  });
+
+}); 
+      // sortable table end  
+
     </script>
 
     
