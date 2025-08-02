@@ -151,7 +151,9 @@ CODING PROJECT -
                 src="ourStory_Family.png"
                 class="imageFloatLeft"
                 alt="Ngyuen family photo"
-                style="float:left;width:40%;height:40%;margin-right: 40px;"
+                style="float:left;width:40%;height:40%;margin-right: 40px;
+                aspect-ratio: 31/22;
+                "
               />
 
         Keren and Khoa are high school sweethearts who grew up together 
@@ -322,6 +324,7 @@ CODING PROJECT -
 
         </div>                
     </div>
+
 <div class="plain-divider"></div>
 
 <!--Start Carousel-->
@@ -356,6 +359,7 @@ CODING PROJECT -
 <!--********* SECTION 4: Merch*********-->    
 <div id="merchLink"
 style="background-color: white;">
+
 
     <h1 class="yellowtail-regular">Merch</h1>
     <div class="merchTopContainer">
@@ -417,7 +421,7 @@ style="background-color: white;">
               </td>
               <td>Crewneck</td>
               <td>$41.99</td>
-              <td>Big</td>
+              <td>Light grey</td>
             </tr>
           </table>
           <!-- add sortable table end -->
@@ -677,12 +681,14 @@ $(function() {
       }
       // carousel slideshow end
 
+
     function changeImage(el) {
       document.getElementById("mainImage").src = el.src;
       const thumbnails = document.querySelectorAll(".thumbnail img");
       thumbnails.forEach(img => img.classList.remove("active"));
       el.classList.add("active");
     }      
+
     </script>
 
     
