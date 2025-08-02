@@ -330,6 +330,88 @@ CODING PROJECT -
     </div>
 
 </div>
+
+
+      <!-- Seasoning Section -->
+      <div>
+        <div class="w3-padding-large">
+          <h1 class="w3-center">Seasoning</h1>
+          <!-- carousel slideshow begin -->
+
+          <div class="w3-col s3">
+            <!-- "currentDiv(1)" link to 1st slide -->
+            <!-- demo class is used by a javascript function to turn off the opacity effect -->
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="./carousel/1carousel.png"
+              style="width: 30%; cursor: pointer; padding: 7px"
+              onclick="currentDiv(1)"
+            />
+          </div>
+          <div class="w3-col s3">
+            <!-- "currentDiv(2)" link to 2nd slide -->
+            <!-- demo class is used by a javascript function to turn off the opacity effect -->
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="./carousel/2carousel.png"
+              style="width: 30%; cursor: pointer; padding: 7px"
+              onclick="currentDiv(2)"
+            />
+          </div>
+          <div class="w3-col s3">
+            <!-- "currentDiv(3)" link to 3rd slide -->
+            <!-- demo class is used by a javascript function to turn off the opacity effect -->
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="./carousel/3carousel.png"
+              style="width: 30%; cursor: pointer; padding: 7px"
+              onclick="currentDiv(3)"
+            />
+          </div>
+          <div class="w3-col s3">
+            <!-- "currentDiv(4)" link to 4th slide -->
+            <!-- demo class is used by a javascript function to turn off the opacity effect -->
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="./carousel/4carousel.png"
+              style="width: 30%; cursor: pointer; padding: 7px"
+              onclick="currentDiv(4)"
+            />
+          </div>
+          <!-- add carousel thumbnail end-->
+          <div>
+            <img class="mySlides" src="./carousel/1carousel.png" style="width:20%" />
+            <img
+              class="mySlides"
+              src="./carousel/2carousel.png"
+              style="width: 20%; display: none"
+            />
+            <img
+              class="mySlides"
+              src="./carousel/3carousel.png"
+              style="width: 20%; display: none"
+            />
+            <img
+              class="mySlides"
+              src="./carousel/4carousel.png"
+              style="width: 20%; display: none"
+            />
+          </div>
+          <!-- carousel slideshow end -->
+
+          <!-- add carousel thumbnail begin-->
+          <!-- add thumbnail buttons for selecting a slide to show -->
+          <!-- step 1: create numbers of buttons based on number of carousel slides -->
+          <!-- step 2: add a <div> tag for each button -->
+          <!--    use w3-col to allocate space for each button -->
+          <!--    sourse: https://www.w3schools.com/w3css/w3css_responsive.asp -->
+          <!-- step 3: add a <img> tag inside each <div> tag to reference image file -->
+          <!-- step 4: style the button with different w3 classes and inline css -->
+          <!-- step 5: hook a javascript function to display the selected slide -->
+
+          
+
+        </div>
 <!--********* SECTION 4: Merch*********-->    
 <div id="merchLink"
 style="background-color: pink;">
@@ -603,7 +685,49 @@ $(function() {
 
 }); 
       // sortable table end  
+      var myIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
 
+      // slideshow - carousel
+      // hook each carousel button
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+        myIndex = n;
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+      }
+      // carousel slideshow end
     </script>
 
     
