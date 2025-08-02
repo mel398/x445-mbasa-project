@@ -378,6 +378,7 @@ CODING PROJECT -
               onclick="currentDiv(4)"
             />
           </div>
+   
           <!-- add carousel thumbnail end-->
           <div>
             <img class="mySlides" src="./carousel/1carousel.png" style="width:20%" />
@@ -612,7 +613,24 @@ style="background-color: pink;">
 
 </div>
 
-    
+  <div class="carousel">
+    <img id="mainImage" class="main-image" src="./carousel/1carousel.png" alt="Main Image" />
+
+    <div class="thumbnails">
+      <div class="thumbnail">
+        <img src="./carousel/1carousel.png" onclick="changeImage(this)" class="active" />
+      </div>
+      <div class="thumbnail">
+        <img src="./carousel/2carousel.png" onclick="changeImage(this)" />
+      </div>
+      <div class="thumbnail">
+        <img src="./carousel/3carousel.png" onclick="changeImage(this)" />
+      </div>
+      <div class="thumbnail">
+        <img src="./carousel/4carousel.png" onclick="changeImage(this)" />
+      </div>
+    </div>
+  </div>    
 <!--********* FOOTER *********-->    
     <footer>
         <!--
@@ -728,6 +746,13 @@ $(function() {
         dots[slideIndex - 1].className += " w3-opacity-off";
       }
       // carousel slideshow end
+
+    function changeImage(el) {
+      document.getElementById("mainImage").src = el.src;
+      const thumbnails = document.querySelectorAll(".thumbnail img");
+      thumbnails.forEach(img => img.classList.remove("active"));
+      el.classList.add("active");
+    }      
     </script>
 
     
