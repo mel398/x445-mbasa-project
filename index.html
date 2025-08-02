@@ -142,6 +142,7 @@ CODING PROJECT -
     <h2>(707)123-4567</h2>
     -->   
 </div>
+<hr class="section-divider" />
 <!--********* SECTION 2: HOURS AND LOCATIONS *********-->          
 <div class="ourStory" id="ourStoryLink">
     <h1 class="yellowtail-regular">Our Story</h1>
@@ -212,22 +213,40 @@ CODING PROJECT -
     </p>
 
 
-    <!--Our Story Youtube Video-->
+    <!--Our Story Youtube Video
     <div class="ytVideo">
-        
-        <!--
-        <iframe width="420" height="315"
-        src="https://www.youtube.com/watch?v=SWhBUZC3Wh4">
-        </iframe>
-    -->
+
         <iframe width="560" height="315" src="https://www.youtube.com/embed/SWhBUZC3Wh4?si=JRAoYVOQo6ICmIbZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
+    -->
 </div>
+<hr class="section-divider" />
 
 <!--********* SECTION 3: MENU *********-->     
 <div class="menuSection" id="menuLink">
-    <h1 class="yellowtail-regular" >Menu</h1>
+
+<!--Start Carousel-->
+<h1 class="yellowtail-regular" >Menu</h1>
+  <div class="carousel" style="padding-top: 20px;">
+    <img id="mainImage" class="main-image" src="./carousel/1carousel.png" alt="Main Image" />
+
+    <div class="thumbnails">
+      <div class="thumbnail">
+        <img src="./carousel/1carousel.png" onclick="changeImage(this)" class="active" />
+      </div>
+      <div class="thumbnail">
+        <img src="./carousel/2carousel.png" onclick="changeImage(this)" />
+      </div>
+      <div class="thumbnail">
+        <img src="./carousel/3carousel.png" onclick="changeImage(this)" />
+      </div>
+      <div class="thumbnail">
+        <img src="./carousel/4carousel.png" onclick="changeImage(this)" />
+      </div>
+    </div>
+  </div>    
+<!--End Carousel-->    
+    
 
     <div class="menuItems"> <!--Box for photos and scrollable items-->
         <div><!--Scoops Section-->
@@ -324,98 +343,15 @@ CODING PROJECT -
 
         </div>                
     </div>
-    <div>
-        <!---->
-
-    </div>
-
 </div>
 
 
-      <!-- Seasoning Section -->
-      <div>
-        <div class="w3-padding-large">
-          <h1 class="w3-center">Seasoning</h1>
-          <!-- carousel slideshow begin -->
+  <div style="height: 40px;"></div>
+<hr class="section-divider" />
 
-          <div class="w3-col s3">
-            <!-- "currentDiv(1)" link to 1st slide -->
-            <!-- demo class is used by a javascript function to turn off the opacity effect -->
-            <img
-              class="demo w3-opacity w3-hover-opacity-off"
-              src="./carousel/1carousel.png"
-              style="width: 30%; cursor: pointer; padding: 7px"
-              onclick="currentDiv(1)"
-            />
-          </div>
-          <div class="w3-col s3">
-            <!-- "currentDiv(2)" link to 2nd slide -->
-            <!-- demo class is used by a javascript function to turn off the opacity effect -->
-            <img
-              class="demo w3-opacity w3-hover-opacity-off"
-              src="./carousel/2carousel.png"
-              style="width: 30%; cursor: pointer; padding: 7px"
-              onclick="currentDiv(2)"
-            />
-          </div>
-          <div class="w3-col s3">
-            <!-- "currentDiv(3)" link to 3rd slide -->
-            <!-- demo class is used by a javascript function to turn off the opacity effect -->
-            <img
-              class="demo w3-opacity w3-hover-opacity-off"
-              src="./carousel/3carousel.png"
-              style="width: 30%; cursor: pointer; padding: 7px"
-              onclick="currentDiv(3)"
-            />
-          </div>
-          <div class="w3-col s3">
-            <!-- "currentDiv(4)" link to 4th slide -->
-            <!-- demo class is used by a javascript function to turn off the opacity effect -->
-            <img
-              class="demo w3-opacity w3-hover-opacity-off"
-              src="./carousel/4carousel.png"
-              style="width: 30%; cursor: pointer; padding: 7px"
-              onclick="currentDiv(4)"
-            />
-          </div>
-   
-          <!-- add carousel thumbnail end-->
-          <div>
-            <img class="mySlides" src="./carousel/1carousel.png" style="width:20%" />
-            <img
-              class="mySlides"
-              src="./carousel/2carousel.png"
-              style="width: 20%; display: none"
-            />
-            <img
-              class="mySlides"
-              src="./carousel/3carousel.png"
-              style="width: 20%; display: none"
-            />
-            <img
-              class="mySlides"
-              src="./carousel/4carousel.png"
-              style="width: 20%; display: none"
-            />
-          </div>
-          <!-- carousel slideshow end -->
-
-          <!-- add carousel thumbnail begin-->
-          <!-- add thumbnail buttons for selecting a slide to show -->
-          <!-- step 1: create numbers of buttons based on number of carousel slides -->
-          <!-- step 2: add a <div> tag for each button -->
-          <!--    use w3-col to allocate space for each button -->
-          <!--    sourse: https://www.w3schools.com/w3css/w3css_responsive.asp -->
-          <!-- step 3: add a <img> tag inside each <div> tag to reference image file -->
-          <!-- step 4: style the button with different w3 classes and inline css -->
-          <!-- step 5: hook a javascript function to display the selected slide -->
-
-          
-
-        </div>
 <!--********* SECTION 4: Merch*********-->    
 <div id="merchLink"
-style="background-color: pink;">
+style="background-color: white;">
 
     <h1 class="yellowtail-regular">Merch</h1>
     <div class="merchTopContainer">
@@ -483,7 +419,7 @@ style="background-color: pink;">
           <!-- add sortable table end -->
         </div>
       </div>
-  
+<hr class="section-divider" />  
 <!--********* SECTION 5: Inside Scoop*********-->    
 <div id="insideScoopLink">
 
@@ -607,30 +543,13 @@ style="background-color: pink;">
     </div>
     </div>
 </div>
-
+<hr class="section-divider" />
  <!--********* SECTION 6: Gallery*********-->  
 <div id="galleryLink">
 
 </div>
 
-  <div class="carousel">
-    <img id="mainImage" class="main-image" src="./carousel/1carousel.png" alt="Main Image" />
 
-    <div class="thumbnails">
-      <div class="thumbnail">
-        <img src="./carousel/1carousel.png" onclick="changeImage(this)" class="active" />
-      </div>
-      <div class="thumbnail">
-        <img src="./carousel/2carousel.png" onclick="changeImage(this)" />
-      </div>
-      <div class="thumbnail">
-        <img src="./carousel/3carousel.png" onclick="changeImage(this)" />
-      </div>
-      <div class="thumbnail">
-        <img src="./carousel/4carousel.png" onclick="changeImage(this)" />
-      </div>
-    </div>
-  </div>    
 <!--********* FOOTER *********-->    
     <footer>
         <!--

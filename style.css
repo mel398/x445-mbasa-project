@@ -100,6 +100,15 @@ nav li:first-child{
   }
 }
 
+.section-divider {
+  border: none;
+  height: 1px;
+  background-color: #ddd; /* faint grey */
+  margin: 40px auto;       /* center with top & bottom spacing */
+  max-width: 80%;          /* keeps line away from edges */
+}
+
+
 .locationInfo{
   margin-left: 15px;
   margin-right: 15px;
@@ -123,7 +132,7 @@ nav li:first-child{
 }
 
 .ourStory{
-  background-color: #EBB0BF;
+  background-color: white;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -268,6 +277,8 @@ p {
 
 /* Accoridan Properties----------------*/
 .accordion {
+  
+  max-width: 80%;          /* keeps line away from edges */
   background-color: #EBB0BF;
   color:#592e1a;
   cursor: pointer;
@@ -286,6 +297,7 @@ p {
 }
 
 .panel {
+  margin: 40px auto;       /* center with top & bottom spacing */
   padding: 0 18px;
   display: none;
   background-color:#ffffff;
