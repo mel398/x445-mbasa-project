@@ -395,7 +395,6 @@ p {
     }
 
     .thumbnails {
-      max-width: 400px;
       display: flex;
       justify-content: center;
       margin-top: 15px;
@@ -403,10 +402,8 @@ p {
     }
 
     .thumbnail img {
-      opacity: 0.8;
-      margin: auto;
-      width: 160px;
-      height: 120px;
+      width: 80px;
+      height: 60px;
       object-fit: cover;
       cursor: pointer;
       border: 2px solid transparent;
